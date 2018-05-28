@@ -53,6 +53,14 @@ class IndecisionApp extends React.Component {
         console.log(randomNum);
         alert(option);
     }
+<<<<<<< HEAD
+=======
+    handleDeleteOptions() {
+        this.setState(() => ({ options: [] }));
+    }
+
+   
+>>>>>>> 58f31e8c40565f4999864efcbf61d99c96799283
 
     handleAddOption(option) {
         if(!option) {
@@ -60,7 +68,16 @@ class IndecisionApp extends React.Component {
         } else if(this.state.options.indexOf(option) > -1){
             return 'this option is already exist'
         }
+<<<<<<< HEAD
         this.setState((prevState) => ({ options: prevState.options.concat(option)}));
+=======
+        // this.setState((prevState) => {
+        //     return {
+        //         options: prevState.options.concat(option)
+        //     }
+        // });
+        this.setState((prevState) => ({ options: prevState.options.concat(option) }));
+>>>>>>> 58f31e8c40565f4999864efcbf61d99c96799283
     }
     render() {
         const subtittle = 'Put your life in the hands of computer';
@@ -162,12 +179,20 @@ class AddOption extends React.Component {
 
         const option = e.target.elements.option.value.trim();   
         const error = this.props.handleAddOption(option);
+<<<<<<< HEAD
 
         this.setState(() => ({ error}));
 
         if(!error) {
             e.target.elements.option.value = '';
         }
+=======
+        
+        // this.setState(() => {
+        //     return { error };
+        // });
+        this.setState(() => ({ error }));
+>>>>>>> 58f31e8c40565f4999864efcbf61d99c96799283
     }
     render() {
         return (
@@ -182,13 +207,5 @@ class AddOption extends React.Component {
     }
 }
 
-// const User  = (props) => {
-//     return (
-//         <div>
-//             <p>Name: {props.name} </p>
-//             <p>Age: {props.age} </p>
-//         </div>
-//     );
-// }
 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
