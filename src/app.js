@@ -16,8 +16,11 @@ class IndecisionApp extends React.Component {
         alert(option);
     }
     handleDeleteOptions() {
-        this.setState(() => ({ options: []}));
+        this.setState(() => ({ options: [] }));
     }
+
+   
+
     handleAddOption(option) {
         if(!option) {
             return 'enter valid value to add item'
@@ -133,13 +136,5 @@ class AddOption extends React.Component {
     }
 }
 
-// const User  = (props) => {
-//     return (
-//         <div>
-//             <p>Name: {props.name} </p>
-//             <p>Age: {props.age} </p>
-//         </div>
-//     );
-// }
 
 ReactDOM.render(<IndecisionApp options={['opt1', 'opt2']} />, document.getElementById('app'));

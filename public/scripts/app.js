@@ -48,13 +48,11 @@ var IndecisionApp = function (_React$Component) {
             } else if (this.state.options.indexOf(option) > -1) {
                 return 'this option is already exist';
             }
-            // this.setState((prevState) => {
-            //     return {
-            //         options: prevState.options.concat(option)
-            //     }
-            // });
+
             this.setState(function (prevState) {
-                return { options: prevState.options.concat(option) };
+                return {
+                    options: prevState.options.concat(option)
+                };
             });
         }
     }, {
@@ -166,10 +164,6 @@ var AddOption = function (_React$Component2) {
             e.preventDefault();
             var option = e.target.elements.option.value.trim();
             var error = this.props.handleAddOption(option);
-
-            // this.setState(() => {
-            //     return { error };
-            // });
             this.setState(function () {
                 return { error: error };
             });
@@ -201,14 +195,4 @@ var AddOption = function (_React$Component2) {
 
     return AddOption;
 }(React.Component);
-
-// const User  = (props) => {
-//     return (
-//         <div>
-//             <p>Name: {props.name} </p>
-//             <p>Age: {props.age} </p>
-//         </div>
-//     );
-// }
-
 ReactDOM.render(React.createElement(IndecisionApp, { options: ['opt1', 'opt2'] }), document.getElementById('app'));
