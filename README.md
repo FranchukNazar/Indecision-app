@@ -3,14 +3,14 @@
 This app will randomly choose one option from your list.
 Its my first app on React.
 
-##User can:
+﻿## User can:
 
 Add choice
 Remove
 Remove All
 Randomly choose one option
 
-##Technologies:
+﻿## Technologies:
 
 ES6
 React
